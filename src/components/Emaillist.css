@@ -1,7 +1,9 @@
 .main-container {
     width: 100wh;
     min-height: 100vh;
-    border: 1px solid red;
+    border:1px solid rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    
 }
 
 .heading {
@@ -38,7 +40,7 @@ table tr{
     
 }
 thead tr td{
-    padding: 20px
+    padding: 20px;
 }
 tbody tr td{
     padding: 20px;

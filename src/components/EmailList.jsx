@@ -1,7 +1,41 @@
 import { Fragment } from "react";
 import "./Emaillist.css";
-const EmailList = () => {
+const EmailList = () => {  
+    const data = [
+        {
+            "name":"Masadi Srinath",
+            "email":"srinathmasadi@gmail.com",
+            "phone":9381076726,
+            "status":"Open",
+            "added":"Manually Added",
+            "dateAdded":"02-11-2022"
+        },{
+            "name":"Madasu Anwesh",
+            "email":"anwesh@gmail.com",
+            "phone":9381076475,
+            "status":"Closed",
+            "added":"Web Form",
+            "dateAdded":"02-11-2022"
+        },
+        {
+            "name":"Penthala Mani",
+            "email":"mani@gmail.com",
+            "phone":7745841256,
+            "status":"In Progress",
+            "added":"Web Form",
+            "dateAdded":"02-11-2022"
+        },
+        {
+            "name":"Paul Edward",
+            "email":"edward@gmail.com",
+            "phone":7785236998,
+            "status":"Closed",
+            "added":"Web Form",
+            "dateAdded":"02-11-2022"
+        }
+    ]
   return (
+    
     <Fragment>
       <div className="main-container">
         <div className="heading">
@@ -47,19 +81,23 @@ const EmailList = () => {
             </tr>
           </thead>
           <tbody>
-          <tr>
+          {
+            data.map((val) => (
+                <tr>
           <td className="flex">
               <div className="name">
-              <input type="checkbox" />Priyanka
+              <input type="checkbox" />{val.name}
               </div>
               <button>...</button>
             </td>
-            <td>pri@gmail.com</td>
-            <td>9785356457</td>
-            <td>Open</td>
-            <td>Manually Added</td>
-            <td>11/1/12</td>
+            <td>{val.email}</td>
+            <td>{val.phone}</td>
+            <td style={{color: val.status === 'Closed' ? 'red' : val.status === 'In Progress' ? 'blue' : 'green'}}>{val.status}</td>
+            <td>{val.added}</td>
+            <td>{val.dateAdded}</td>
           </tr>
+            ))
+          }
           </tbody>
         </table>
       </div>
