@@ -1,0 +1,58 @@
+.main-container {
+    width: 100wh;
+    min-height: 100vh;
+    border: 1px solid red;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border:1px solid rgba(0, 0, 0, 0.1);
+}
+.heading .searchbar input{
+    border:1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 250px;
+    position: relative;
+}
+.heading .searchbar svg {
+    position: absolute;
+    left: 29px;
+    top: 35px;
+
+}
+.right-corner button{
+    background: none;
+    border: 1px solid ;
+    margin-left: 10px;
+    padding:10px;
+    border-radius: 4px;
+}
+table tr{
+    padding: 20px;
+    border:1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    
+}
+thead tr td{
+    padding: 20px
+}
+tbody tr td{
+    padding: 20px;
+}
+table{
+    border:1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+
+}
+ tr td.flex {
+    display:flex;
+    justify-content: space-between;
+}
+  
+
