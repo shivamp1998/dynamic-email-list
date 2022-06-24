@@ -56,5 +56,57 @@ table{
     display:flex;
     justify-content: space-between;
 }
+.dots{
+    border:none
+}
+
+/* Pagination Css */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.pagination svg {
+    margin: 0 10px;
+}
+
+.pagination li {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* navbar dropdown */
+    color: #6D6D6D;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border: 1px solid transparent;
+}
+
+.pagination li:hover {
+    color: #286B68;
+    border: 1px solid #286B68;
+    border-radius: 50%;
+}
+
+.pagination-active {
+    color: #286B68!important;
+    border: 1px solid #286B68!important;
+    border-radius: 50%!important;
+}
+
+.page-link {
+    cursor: pointer;
+}
+
+
+/* Pagination Css Ends*/
+
   
 
