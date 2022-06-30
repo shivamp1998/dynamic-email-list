@@ -13,21 +13,22 @@ const GithubList = () => {
     useEffect(() => {
       axios.get('https://api.github.com/repos/octocat/Hello-World/issues?q=state:open').then((response)=>{
         if(response.status===200){
-            console.log(response.data);
             setIssues(response.data);
         }
       })
     }, [])
 
-    const pageSize = 5;
+  const pageSize = 5;
   const pageCount = issues ? Math.ceil(issues.length / pageSize) : 0;
-  console.log(pageCount)
   const pages = _.range(1, pageCount + 1);
 
+  
   const pagination = (page) => {
     setCurrentPage(page);
     const startIndex = (page - 1) * pageSize;
+    console.log(page);
     const paginationData = _(issues).slice(startIndex).take(pageSize).value();
+    console.log('pagination Data',paginationData)
     setPaginatedData(paginationData);
   };
     
@@ -63,7 +64,7 @@ const GithubList = () => {
                     <table>
                         <tbody>
                         {
-                            issues.map((value,index)=>{
+                          paginatedData && paginatedData.map((value,index)=>{
                                 return(
                                 <tr>
                                     <td>{value.title}</td>
