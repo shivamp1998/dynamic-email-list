@@ -58,7 +58,7 @@ const GithubList = () => {
         <div className='table'>
             <div className='boxheader'>
                 <div className='issues'>
-                    588 Open
+                    {issues.length} Open
                 </div>
                 <div className='header menu-header'>
                   <button> Author <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,9 +103,7 @@ const GithubList = () => {
                     </table>
             </div>
         </div>
-          
-    </div>
-    <nav className="pag-nav">
+        <nav className="pag-nav">
         <ul className="pagination">
           <svg
             width="6"
@@ -118,7 +116,7 @@ const GithubList = () => {
               currentPage - 1 >= 1 && pagination(currentPage - 1);
             }}
           >
-            <path d="M6 11.5L0.5 6L6 0.5L6 11.5Z" fill="#666666" />
+            <path d="M6 11.5L0.5 6L6 0.5L6 11.5Z" fill="#ffff" />
           </svg>
 
           {pages.map((page, index) => (
@@ -145,10 +143,12 @@ const GithubList = () => {
               currentPage + 1 <= pageCount && pagination(currentPage + 1);
             }}
           >
-            <path d="M0 0.5L5.5 6L0 11.5L0 0.5Z" fill="#444444" />
+            <path d="M0 0.5L5.5 6L0 11.5L0 0.5Z" fill="#ffff" />
           </svg>
         </ul>
       </nav>
+    </div>
+    
     </Fragment>
   )
 }
