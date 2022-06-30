@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import axios from 'axios';
 import './githublist.css';
+import { values } from 'lodash';
 
 
 const GithubList = () => {
@@ -42,21 +43,17 @@ const GithubList = () => {
                     <div>Author</div>
                 </div>
             </div>
-            <div>
+            <div className='issues-list'>
                     <table>
-                        <tbody> 
-                            <tr>
-                                <td>Issue 1</td>
-                            </tr>
-                            <tr>
-                                <td>Issue 2</td>
-                            </tr>
-                            <tr>
-                                <td>Issue 3</td>
-                            </tr>
-                            <tr>
-                                <td>Issue 4</td>
-                            </tr>          
+                        <tbody>
+                        {
+                            issues.map((value,index)=>{
+                                return(
+                                <tr>
+                                    <td>{value.title}</td>
+                                </tr>
+                                )
+                    })}
                         </tbody>
                     </table>
             </div>
