@@ -1,0 +1,55 @@
+
+.container{
+width: auto;
+  border: 15px solid green;
+  margin: 5%;
+  height:auto;
+  background-color: aqua;
+}
+.header{
+    /* border:1px solid; */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .filter button{
+    padding: 10px;
+}
+
+.header .filter input{
+    padding: 10px;
+}
+
+.header .labels{
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .labels button{
+    padding: 10px;
+    margin: 3px;
+}
+
+.table{
+  width: auto;
+  border: 2px solid;
+  margin: 10px;
+  height:100vh;
+  background-color: blueviolet;
+}
+
+.table .boxheader{
+    border:2px solid;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+}
+.table .boxheader .header{
+    display: flex;
+    justify-content: space-evenly;
+}
+    

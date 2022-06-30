@@ -1,9 +1,11 @@
 import { Fragment } from "react";
 import EmailList from "./components/EmailList";
+import GithubList from "./components/githubList";
 function App() {
   return (
     <Fragment>
-      <EmailList/>
+      {/* <EmailList/> */}
+      <GithubList />
     </Fragment>
   );
 }
