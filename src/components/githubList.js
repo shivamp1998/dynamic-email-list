@@ -18,6 +18,13 @@ const GithubList = () => {
       })
     }, [])
 
+    useEffect(() => {
+      if(issues) {
+        const paginationData = _(issues).slice(0).take(5).value();
+        setPaginatedData(paginationData);
+      }
+    },[issues])
+
   const pageSize = 5;
   const pageCount = issues ? Math.ceil(issues.length / pageSize) : 0;
   const pages = _.range(1, pageCount + 1);
