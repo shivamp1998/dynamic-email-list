@@ -36,14 +36,16 @@ const GithubList = () => {
     <Fragment>
     <div className='container'>
         <div className='header'>
-            <div className='filter'>
+        <div className='filter'>
                 <button>Filter</button>
                 <input type="text" placeholder='is:issue is:open'></input>
             </div>
             <div className='labels'>
-                <button>Labels</button>
-                <button>Mile-stones</button>
-                <button>New_Issue</button>
+              <div className='label-milestones'>
+               <button className='labels'>Labels <span>1</span> </button>
+               <button className='milestones'>Mile-stones <span>0</span> </button>
+               </div>
+                <button className='new-issues'>New issue</button>
             </div>
         </div>
         <div className='table'>
@@ -51,15 +53,34 @@ const GithubList = () => {
                 <div className='issues'>
                     588 Open
                 </div>
-                <div className='header'>
-                    <div>Author</div>
-                    <div>Author</div>
-                    <div>Author</div>
-                    <div>Author</div>
-                    <div>Author</div>
-                    <div>Author</div>
+                <div className='header menu-header'>
+                  <button> Author <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0.5L5.5 6L0 11.5L0 0.5Z" fill="#444444"/>
+</svg>
+</button>
+                  <button>label <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0.5L5.5 6L0 11.5L0 0.5Z" fill="#444444"/>
+</svg>
+</button>
+                  <button>Projects <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0.5L5.5 6L0 11.5L0 0.5Z" fill="#444444"/>
+</svg>
+</button>
+                  <button>Milestones <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0.5L5.5 6L0 11.5L0 0.5Z" fill="#444444"/>
+</svg>
+</button>
+                  <button>Assignee <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0.5L5.5 6L0 11.5L0 0.5Z" fill="#444444"/>
+</svg>
+</button>
+                  <button>Sort <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0.5L5.5 6L0 11.5L0 0.5Z" fill="#444444"/>
+</svg>
+</button>
                 </div>
             </div>
+            <hr/>
             <div className='issues-list'>
                     <table>
                         <tbody>
