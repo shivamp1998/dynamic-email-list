@@ -83,7 +83,7 @@ hr{
 }
 
 .table .boxheader{
-opacity: 40%;
+
    border-radius:  8px 8px 8xp x8px;
     height: auto;
     width: auto;
@@ -91,8 +91,7 @@ opacity: 40%;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background: rgb(78, 78, 78);
-    
+    background:#282c34;
 }
 .header button{
     margin-left: 10px;
@@ -116,8 +115,13 @@ margin-left: 10px;
     justify-content: space-evenly; 
     color: #fff;
 }
-
-
+.table tr{
+    border: 0.5px solid #fff;
+}
+.table tr td{
+    color: #fff;
+    
+}
 /* Pagination Css */
 
 .pagination {
