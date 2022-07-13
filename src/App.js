@@ -1,11 +1,10 @@
 import { Fragment } from "react";
 import EmailList from "./components/EmailList";
-import GithubList from "./components/githubList";
 function App() {
+  const data = 'aniket Data';
   return (
     <Fragment>
-      {/* <EmailList/> */}
-      <GithubList />
+      <EmailList/>
     </Fragment>
   );
 }
